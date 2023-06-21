@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 62.5%; /*10px*/
+        }
+
+        .wrapper {
+            margin: 3.0rem;
+            display: grid;
+            grid-gap: 20px;
+        }
+
+        .box-container {
+            width: 500px;
+            height: 400px;
+            outline: 1px dashed black;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: repeat(6, 1fr);
+            justify-items: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(103, 119, 183);
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-1:hover {
+           transform: translate(20px, 4rem);
+        }
+
+        .box-2:hover {
+            transform: rotate(-70deg);
+        }
+
+        .box-3:hover {
+            transform: skew(45deg, -70deg);
+        }
+
+        .box-4:hover {
+            transform: scale(1.5);
+        }
+
+        .box-5:hover {
+            transform: matrix(1, 0.5, -0.4, 1, 100, 50)
+        }
+        .box-6:hover {
+            transform: perspective(500px) rotateX(45deg);
+        }
+       .box {
+            /* transition-property: all;
+            transition-duration: 0.8s;
+            transition-timing-function: linear;
+            transition-delay: 0.2s; */
+            transition: all 0.8s linear 0.3s;
+       }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+       <div class="box-container">
+            <div class="box box-1">box 1</div>
+            <div class="box box-2">box 2</div>
+            <div class="box box-3">box 3</div>
+            <div class="box box-4">box 4</div>
+            <div class="box box-5">box 5</div>
+            <div class="box box-6">box 6</div>
+       </div>
+    </div>
+    
+</body>
+</html>
